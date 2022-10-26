@@ -22,6 +22,14 @@ def get_database():
     return col
 
 def parse_data(data):
+    """Parses Bson data to json
+
+    Args:
+        data (bson): data returned from mongodb
+
+    Returns:
+        json: parsed json data
+    """
     return json.loads(json_util.dumps(data))
 
 @app.route('/rest/v1/products', methods = ['GET'])
